@@ -1,0 +1,433 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f1e7;
+    color:#2d1b12;
+}
+
+
+/* MENU */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#5b2518;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.logo{
+    color:#fff;
+    font-size:25px;
+}
+
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+
+nav a:hover{
+    color:#75a84b;
+}
+
+
+
+/* BANNER */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+    url("https://images.unsplash.com/photo-1513104890138-7c749659a591")
+    center/cover;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+}
+
+
+
+.hero-text{
+
+    max-width:800px;
+    animation:aparecer 1.5s;
+
+}
+
+
+.hero h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    font-size:20px;
+    margin-bottom:35px;
+
+}
+
+
+button{
+
+    background:#b52b27;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    background:#75a84b;
+    transform:scale(1.05);
+
+}
+
+
+
+
+/* SEÇÕES */
+
+
+section{
+
+    padding:80px 10%;
+
+}
+
+
+h2{
+
+    text-align:center;
+    font-size:38px;
+    color:#8b291f;
+    margin-bottom:20px;
+
+}
+
+
+.sobre{
+
+    text-align:center;
+
+}
+
+
+.sobre p{
+
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+
+}
+
+
+
+.subtitulo{
+
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+
+
+/* CARDÁPIO */
+
+
+.cards{
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.pizza-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+
+
+.pizza-card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.2);
+
+}
+
+
+
+.pizza-card img{
+
+    width:100%;
+    height:230px;
+    object-fit:cover;
+
+}
+
+
+
+.pizza-card h3{
+
+    color:#8b291f;
+    padding:20px 20px 10px;
+
+}
+
+
+
+.pizza-card p{
+
+    padding:0 20px;
+    line-height:1.6;
+
+}
+
+
+
+.pizza-card strong{
+
+    display:block;
+    padding:20px;
+    color:#38761d;
+    font-size:24px;
+
+}
+
+
+
+/* PROMOÇÕES */
+
+
+.promos{
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.promos div{
+
+    background:#8b291f;
+    color:white;
+
+    padding:30px;
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+
+
+.promos div:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.promos h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+/* AVALIAÇÕES */
+
+
+.avaliacoes{
+
+    text-align:center;
+
+}
+
+
+
+.cliente{
+
+    background:white;
+
+    padding:25px;
+
+    max-width:600px;
+
+    margin:20px auto;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.1);
+
+}
+
+
+.cliente p{
+
+    margin:15px;
+
+}
+
+
+
+
+/* RODAPÉ */
+
+
+footer{
+
+    background:#3b2116;
+
+    color:white;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+
+footer h2{
+
+    color:white;
+
+}
+
+
+footer p{
+
+    margin:15px;
+
+}
+
+
+
+
+/* ANIMAÇÃO */
+
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* CELULAR */
+
+
+@media(max-width:700px){
+
+nav{
+
+    flex-direction:column;
+    gap:15px;
+
+}
+
+
+nav ul{
+
+    gap:15px;
+    font-size:14px;
+
+}
+
+
+.hero h1{
+
+    font-size:35px;
+
+}
+
+
+section{
+
+    padding:60px 5%;
+
+}
+
+}
